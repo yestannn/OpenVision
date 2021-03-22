@@ -7,16 +7,16 @@
    ```sh
    git clone https://github.com/yestannn/OpenVision.git
    ```
-3.1 Install pip windows:
+3.1 Install pip windows
    ```
    python get-pip.py  (for mac python3 get-pip.py)
    ```
-3.2 ubuntu:
+3.2 ubuntu
    ```
    sudo apt update
    sudo apt install python3-pip
    ```
-3.3 mac:
+3.3 mac
    ```
    python3 get-pip.py 
    ```
