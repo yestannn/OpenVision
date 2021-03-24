@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 def home(request):
     context = {
-        'posts': 'posts'
+        'post': 'Home page'
         }
 
-    return render(request, 'packages/base.html', context)
+    return render(request, 'packages/home.html', context)

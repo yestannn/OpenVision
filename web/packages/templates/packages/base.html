@@ -56,8 +56,12 @@
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>
           
-          <li><a href="#contact">LoigIn</a></li>
-          <li><a href="#contact">LogOut</a></li>
+          {% if user.is_authenticated  %}
+              <li><a class="nav-item nav-link" href="{% url 'logout' %}" ><p style="color:red;">Logout</p></a></li>
+          {% else %}
+                <li><a class="nav-item nav-link" href="{% url 'login' %}">Login</a></li>
+                <li><a class="nav-item nav-link" href="{% url 'register' %}">Register</a></li>
+          {% endif %}
 
         </ul>
 
@@ -68,37 +72,14 @@
 
     </div>
   </header><!-- End Header -->
-
-<main id="main">
-
-    <!-- ======= Breadcrumbs Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs Section -->
-
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
-      </div>
-    </section>
-
-
-
-    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-  </main>
+{% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+{% block content %}{% endblock %}
 
 
 
@@ -106,13 +87,14 @@
   <!-- Vendor JS Files -->
     <script scr="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script scr="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-        <script scr="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script scr="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
     <script scr="{% static 'vendor/php-email-form/validate.js' %}"></script>
     <script scr="{% static 'vendor/venobox/venobox.min.js' %}"></script>
     <script scr="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
     <script scr="{% static 'vendor/counterup/counterup.min.js' %}"></script>
     <script scr="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
     <script scr="{% static 'vendor/aos/aos.js' %}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js'%}"></script>

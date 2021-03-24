@@ -1,0 +1,73 @@
+{% extends "packages/base.html" %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+    
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Registration Page</h2>
+          <ol>
+            <li><a href="{% url 'packages-home' %}">Home</a></li>
+            <li>Registration Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+
+
+  </main>
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" >
+          <h2>Join US</h2>
+          <p>Sign Up</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4" >
+            <div class="info">
+              
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>qopenvision@gmail.com</p>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form method="post" role="form" class="php-email-form">
+              {% csrf_token %}
+              
+              <div class="form-group">
+                              {{ form|crispy }}
+              </div>
+
+  
+              <div class="text-center"><button type="submit">Sign Up</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+{% endblock content %}

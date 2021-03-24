@@ -1,0 +1,42 @@
+{% extends "packages/base.html" %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+    
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Log Out Page</h2>
+          <ol>
+            <li><a href="{% url 'packages-home' %}">Home</a></li>
+            <li>Log Out Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+
+
+  </main>
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+         <h2>You have been logged out</h2>
+
+        <div class="border-top pt-3">
+          <small class="text-muted">
+             <a  href="{% url 'login'%}">Log In Again</a>
+
+          </small>
+        </div>
+
+      </div>
+    </section>
+{% endblock content %}
