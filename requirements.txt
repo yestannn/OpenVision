@@ -1,0 +1,6 @@
+###### client side packages ######
+django==3.2.8
+
+###### Microsoft API packages ######
+
+###### Face-ID packages ######
