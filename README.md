@@ -21,9 +21,9 @@
    python3 get-pip.py 
    ```
  
-4. Install Django
+4. Install Packages
    ``` 
-   pip install Django (for mac and ubuntu pip3)
+   pip install -r requirements.txt (for mac and ubuntu pip3)
    ```
    
    
