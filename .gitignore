@@ -1,1 +1,2 @@
-
+web/web/local_settings.py
+web/db.sqlite3
