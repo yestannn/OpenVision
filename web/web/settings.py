@@ -44,6 +44,7 @@ MY_APPS = [
     # all my apps
     'packagetoken.apps.PackagetokenConfig',
     'base.apps.BaseConfig',
+    'user.apps.UserConfig',
 ]
 
 THIRD_PARTY_APPS = [
