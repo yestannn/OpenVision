@@ -1,7 +1,7 @@
 import http.client, urllib.request, urllib.parse, urllib.error, base64
 import json
-
-KEY = '37323a30ac92479eb7135fa97acf1075'
+ 
+from face_api_local.py import *
 
 ENDPOINT = 'https://openvisiondemo.cognitiveservices.azure.com/'
 

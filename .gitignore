@@ -1,3 +1,4 @@
 web/web/local_settings.py
 web/db.sqlite3
 __pycache__/
+Azure/AzureApi/face_api_local.py
