@@ -23,6 +23,6 @@ admin.site.index_title = 'Open Vision Admin Page'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('token/', include('packagetoken.urls')),
-    path('', include('base.urls')),
-       
+    path('accounts/', include('allauth.urls')),
+    path('', include('base.urls')),   
 ]
