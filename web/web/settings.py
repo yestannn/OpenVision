@@ -50,6 +50,8 @@ MY_APPS = [
 
 THIRD_PARTY_APPS = [
     # third party apss
+    'crispy_forms',
+    'crispy_bootstrap5', 
 ]
 
 ALL_AUTH = [
@@ -145,6 +147,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'profile'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 # allauth settings 
 SITE_ID = 1

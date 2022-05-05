@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="content-wrapper container">
+	<div class="row match-height">
+        <div class="col-12">
+				<div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Team Create</h4>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-body">
+                        	<div class="row">
+                        		<form class="form" method="POST">{% csrf_token %}
+                        			{{ form|crispy }}
+                        			<div class="col-12 d-flex justify-content-end">
+                        		<button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                        		<button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                    		</div>
+                        		</form>
+
+                        	</div>
+                        	
+                        </div>
+                    </div>                    
+                </div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

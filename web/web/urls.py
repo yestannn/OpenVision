@@ -29,5 +29,7 @@ urlpatterns +=  [
     path('token/', include('packagetoken.urls')),
     path('accounts/', include('allauth.urls')),
     path('user/', include('user.urls')),
+    path('team/', include('team.urls')),
 ]
 
+handler403 = 'base.views.custom_permission_denied_view'

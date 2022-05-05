@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django_better_admin_arrayfield.models.fields import ArrayField
 
 import uuid
 
@@ -26,4 +27,15 @@ class Team(models.Model):
 		db_table = 'team'
 		verbose_name = 'Team'
 		verbose_name_plural = 'Team'
+
+class TeamMembers(models.Model):
+	team = models.OneToOneField(Team, on_delete=models.CASCADE, related_name='team_members')
+	members_set = models.ManyToManyField(User, blank=True)
+
+	updated_at = models.DateTimeField(auto_now=True)
+
+	class Meta:
+		db_table = 'team_members'
+		verbose_name = 'Team members'
+		verbose_name_plural = 'Team members'
 
