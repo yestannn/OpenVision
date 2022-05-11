@@ -12,8 +12,7 @@
    python get-pip.py  (for mac python3 get-pip.py)
    
    sudo apt update (ubuntu)
-   sudo apt install python3-pip
-      
+   sudo apt install python3-pip   
    ```
 4. Install Packages
    ``` 
