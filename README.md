@@ -15,7 +15,6 @@
    sudo apt install python3-pip
       
    ```
- 
 4. Install Packages
    ``` 
    pip install -r requirements.txt (for mac and ubuntu pip3)
